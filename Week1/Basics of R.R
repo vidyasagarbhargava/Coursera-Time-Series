@@ -39,5 +39,55 @@ plot(Test_2_scores~Test_1_scores, main='Test scores for two exams (50 students)'
 plot(Test_2_scores~Test_1_scores, main='Test scores for two exams (50 students)', xlab='Test_1_scores', ylab='Test 2 scores', col="blue")
 
 
-#Basic of statistics
+
+# Basic of statistics 1 ---------------------------------------------------
+
+
+
+help(co2)
+
+plot(co2,main = 'Atmospheric co2 Concentration')
+
+
+#Developing linear model
+co2.linear.model<-lm(co2~time(co2))
+co2.linear.model
+
+abline(co2.linear.model)
+
+
+# Basic of Statistics 2 ---------------------------------------------------
+
+
+
+#Assessing normality of residuals
+co2.residuals<-resid(co2.linear.model)
+hist(co2.residuals, main = "Histogram of residuals")
+qqnorm(co2.residuals)
+qqline(co2.residuals)
+plot(co2.residuals~time(co2))
+
+plot(co2.residuals~time(co2), xlim =c(1960,1963), main = "Zoomed Residuals")
+
+
+
+# Basic of statistics 3 ---------------------------------------------------
+
+#Review Basic Inferential Statistics
+
+help("sleep")
+#Develop graphical Intuition
+plot(extra~group,data = sleep, main = "Extra sleep in Gossett Data by group")
+attach(sleep)
+extra.1= extra[group==1]
+extra.2= extra[group==2]
+
+#test your hypothesis
+t.test(extra.1,extra.2,paired = TRUE, alternative = "two.sided")
+
+
+
+
+
+
   
