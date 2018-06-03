@@ -87,7 +87,22 @@ t.test(extra.1,extra.2,paired = TRUE, alternative = "two.sided")
 
 
 
+# #Review of basic statistics 4 -------------------------------------------
+#Measuring linear association with correlation function
+help(trees)
+pairs(trees, pch =21, bg = c("red"))
+cov(trees)
+cor(trees)
 
 
 
-  
+
+
+
+
+
+
+
+
+
+
