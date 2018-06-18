@@ -1,0 +1,1 @@
+#Stationarity : Intuition and Definition
